@@ -1,0 +1,56 @@
+{ "name": "DASM-16",
+  "scopeName": "source.dasm",
+  "fileTypes": ["dasm", "dasm16"],
+  "patterns": [
+    {
+      "match": "^(:)([a-z][a-z_]*)\\b",
+      "captures": {
+        "1": { "name": "support.type.label.dasm"},
+        "2": { "name": "variable.label.dasm"}
+      }
+    },
+    {
+      "match": "(?i)^\\s+(set|add|sub|mul|div|mod|shl|shr|and|bor|xor|ife|ifn|ifg|ifb)\\b",
+      "name": "support.function.opcode.basic.dasm"
+    },
+    {
+      "match": "(?i)^\\s+jsr\\b",
+      "name": "support.function.opcode.nonbasic.dasm"
+    },
+    {
+      "match": "(?i)^\\s+dat\\b",
+      "name": "support.function.data.declaration.dasm"
+    },
+    {
+      "match": "(?i)\\b(([a-ci-jx-z]|pc|sp)|(pop|peek|push)|o)\\b",
+      "captures": {
+        "1": { "name": "support.other.register.dasm" },
+        "2": { "name": "support.other.spValue.dasm" },
+        "3": { "name": "support.other.overflow.dasm" }
+}    },
+    {
+      "match": "\\b([d-hk-nqrt-w][a-z_]*)|([a-ci-jox-z][a-z_]+)|(s([a-oq-z_][a-z_]*|(p[a-z_]))?)|(p(([abdf-np-tv-z_][a-z_]*)|(c[a-z_]+)|(e(([a-df-z_][a-z_]*)|(e(([a-jl-z_][a-z_]*)|(k[a-z_]+))?))?)|(o(([a-oq-z_][a-z_]*)|(p[a-z_]+))?)|(u(([a-rt-z_][a-z_]*)|(s(([a-gi-z_][a-z_]*)|(h[a-z_]+))?))?))?)\\b",
+      "name": "variable.label.dasm"
+    },
+    {
+      "match": ";[^$]*",
+      "name": "comment.line.semicolon.dasm"
+    },
+    {
+      "match": "\"[^$^\"]+\"",
+      "name": "string.quoted.double.dasm"
+    },
+    {
+      "match": "(0(x|X)[\\h]+)|([\\d]+)",
+      "captures": {
+        "1": { "name": "constant.numeric.hexadecimal.dasm" },
+        "3": { "name": "constant.numeric.decimal.dasm"}
+      }
+    },
+    {
+      "match": "\\+|-",
+      "name": "keyword.operator.dasm"
+    }
+  ],
+  "uuid": "28356f7f-d329-42ef-bad9-6ba2de8f7402"
+}
