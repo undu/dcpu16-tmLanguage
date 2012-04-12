@@ -14,9 +14,11 @@ Remember that it only applies the highlight if the file extension is .dasm or .d
 
 ## Screenshots
 
-Here's how Notch's example code looks like in Monokai, [Railscats](http://railscasts.com/about) and [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme) themes with the language grammar.
+Here's how Notch's example code looks like in Monokai, [Railscasts](http://railscasts.com/about) and [Tomorrow Night](https://github.com/ChrisKempson/Tomorrow-Theme) themes with the language grammar.
 
-
+![Monokai](https://github.com/undu/dcpu16-tmLanguage/raw/master/monokai.png)
+![Railscasts](https://github.com/undu/dcpu16-tmLanguage/raw/master/railscasts.png)
+![Tomorrow Night](https://github.com/undu/dcpu16-tmLanguage/raw/master/tomorrow-night.png)
 
 ## Caveats
 The language grammar is only intended for simple highlight. Some tags may still need some tweaks to adjust colours, but after that monster regex for the labels I need to rest a bit. :p
